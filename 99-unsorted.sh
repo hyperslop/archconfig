@@ -44,3 +44,65 @@ SetFileProperty /usr/bin/groupmems group groups
 SetFileProperty /usr/bin/groupmems mode 2750
 SetFileProperty /usr/lib/utempter/utempter group utmp
 SetFileProperty /usr/lib/utempter/utempter mode 2755
+
+
+# Tue Aug  5 03:03:17 PM PDT 2025 - Unknown packages
+
+
+AddPackage blender # A fully integrated 3D graphics creation suite
+AddPackage dolphin-emu # A Gamecube and Wii emulator
+AddPackage feh # Fast and light imlib2-based image viewer
+AddPackage godot # Advanced cross-platform 2D and 3D game engine
+AddPackage iptables # Linux kernel packet control tool (using legacy interface)
+AddPackage proton-vpn-gtk-app # ProtonVPN GTK app, Maintained by Community
+AddPackage qalculate-qt # Qt frontend for libqalculate
+AddPackage ristretto # A fast and lightweight picture viewer for Xfce
+AddPackage steam # Valve's digital software delivery system
+AddPackage stow # Manage installation of multiple softwares in the same directory tree
+AddPackage tor # Anonymizing overlay network.
+AddPackage yt-dlp # A youtube-dl fork with additional features and fixes
+
+
+# Tue Aug  5 03:03:18 PM PDT 2025 - Missing packages
+
+
+RemovePackage iptables-nft
+
+
+# Tue Aug  5 03:03:18 PM PDT 2025 - Unknown foreign packages
+
+
+AddPackage --foreign bitwig-studio # Digital audio workstation for music production, remixing and live performance
+AddPackage --foreign gallery-dl-bin # Command-line program to download image-galleries and collections from several image hosting sites (bin)
+AddPackage --foreign mullvad-browser-bin # Privacy-focused web browser developed by Mullvad VPN and the Tor Project
+AddPackage --foreign mullvad-vpn # The Mullvad VPN client app for desktop
+AddPackage --foreign obs-studio-git # Free and open source software for video recording and live streaming
+AddPackage --foreign tor-browser-bin # Tor Browser Bundle: anonymous browsing using Firefox and Tor
+AddPackage --foreign ventoy-bin # A new bootable USB solution
+
+
+# Tue Aug  5 03:03:18 PM PDT 2025 - New / changed files
+
+
+CreateDir /etc/openvpn/client 750 openvpn network
+CreateDir /etc/openvpn/server 750 openvpn network
+CreateLink /etc/systemd/system/mullvad-daemon.service.wants/mullvad-early-boot-blocking.service /usr/lib/systemd/system/mullvad-early-boot-blocking.service
+CreateLink /etc/systemd/system/multi-user.target.wants/libvirtd.service /usr/lib/systemd/system/libvirtd.service
+CreateLink /etc/systemd/system/multi-user.target.wants/mullvad-daemon.service /usr/lib/systemd/system/mullvad-daemon.service
+CreateLink /etc/systemd/system/sockets.target.wants/libvirtd-admin.socket /usr/lib/systemd/system/libvirtd-admin.socket
+CreateLink /etc/systemd/system/sockets.target.wants/libvirtd-ro.socket /usr/lib/systemd/system/libvirtd-ro.socket
+CreateLink /etc/systemd/system/sockets.target.wants/libvirtd.socket /usr/lib/systemd/system/libvirtd.socket
+CreateLink /etc/systemd/system/sockets.target.wants/virtlockd-admin.socket /usr/lib/systemd/system/virtlockd-admin.socket
+CreateLink /etc/systemd/system/sockets.target.wants/virtlockd.socket /usr/lib/systemd/system/virtlockd.socket
+CreateLink /etc/systemd/system/sockets.target.wants/virtlogd-admin.socket /usr/lib/systemd/system/virtlogd-admin.socket
+CreateLink /etc/systemd/system/sockets.target.wants/virtlogd.socket /usr/lib/systemd/system/virtlogd.socket
+CopyFile /opt/ventoy/Ventoy2Disk.ini
+CopyFile /opt/ventoy/log.txt
+CreateLink /usr/lib/jvm/default java-24-openjdk
+CreateLink /usr/lib/jvm/default-runtime java-24-openjdk
+
+
+# Tue Aug  5 03:03:18 PM PDT 2025 - New file properties
+
+
+SetFileProperty /usr/bin/mullvad-exclude mode 4755
