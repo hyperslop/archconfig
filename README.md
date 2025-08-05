@@ -27,4 +27,4 @@ Remember to manage dotfiles and system dotfiles as you go goofball, log stuff in
 
 ### Why not NixOS?
 
-I left nixos because it sucks but soon I'm sure I'll try to go back but I'll configure it in on another computer like a sane person I wasn't modivated enough to immediatly tank nixOS, but the itch will not leave me the worms continue to whisper sweet nothing in my ear
+I left nixos because it sucks but soon I'm sure I'll try to go back but I'll configure it in on another computer like a sane person I wasn't motivated enough to immediatly tank nixOS, but the itch will not leave me the worms continue to whisper sweet nothings in my ear
